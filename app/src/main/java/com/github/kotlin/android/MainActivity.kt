@@ -7,32 +7,42 @@ import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.View
-import android.widget.Button
 import com.github.kotlin.R
 import com.github.kotlin.R.layout.activity_main
 import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : AppCompatActivity() {
-    val a = 0;
-    val b = 0;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(activity_main)
+        num_a.setText("0")
+        num_b.setText("0")
         initView()
 
     }
 
+    private fun js(a: Int): Int {
+        return if (a == 0 || a == 1) {
+            1
+        } else {
+            a * js(a - 1)
+        }
+    }
+fun toastShow(view:View,str:String){
+    Snackbar.make(view, "Replace with your own action"+str, Snackbar.LENGTH_LONG)
+            .setAction("Action", null).show()
+}
     private fun initView() {
         val toolbar = findViewById(R.id.toolbar) as Toolbar
         setSupportActionBar(toolbar)
         val fab = findViewById(R.id.fab) as FloatingActionButton
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+            toastShow(view,"")
         }
         btn_login.text = "计算成功"
         btn_login.setOnClickListener {
             this@MainActivity
+            onClick(btn_login)
         }
         btn_add.setOnClickListener {
             this@MainActivity
@@ -54,20 +64,42 @@ class MainActivity : AppCompatActivity() {
 
     fun onClick(view: View): Unit {
         val id = view.id;
-        var a=num_a.text
-        var b=(num_b.text)
-        var i=Integer.parseInt(a.toString())
-        var j=Integer.parseInt(b.toString())
+        val a = num_a.text
+        val b = num_b.text
+        val i = onParseInt(a.toString())
+        val j = onParseInt(b.toString())
         when (id) {
 
-            R.id.btn_add->tv_num.text=getAdd(i,j).toString()
-            R.id.btn_sub ->tv_num.text=getSub(i,j).toString()
-            R.id.btn_pro ->tv_num.text=getPro(i,j).toString()
-            R.id.btn_div ->tv_num.text=getDiv(i,j).toString()
+            R.id.btn_add -> {
+                tv_num.text = getAdd(i, j).toString()
+            }
+            R.id.btn_sub -> {
+                tv_num.text = getSub(i, j).toString()
+            }
+            R.id.btn_pro -> {
+                tv_num.text = getPro(i, j).toString()
+            }
+            R.id.btn_div -> {
+                tv_num.text = getDiv(i, j).toString()
+            }
+            R.id.btn_login -> {
+                toastShow(view,js(6).toString())
+                jump()
+            }
         }
     }
+    ;
+    private fun onParseInt(str: String?): Int {
+        if (str == null) {
+            return 0
+        }
+        return Integer.parseInt(str)
+    }
 
-    fun jump() {
+    /**
+     * 界面条状
+     */
+    private fun jump(): Unit {
         val intent = Intent()
         //获取intent对象
         intent.setClass(this, LoginActivity::class.java)
