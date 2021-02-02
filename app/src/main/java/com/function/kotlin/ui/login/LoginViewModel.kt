@@ -38,7 +38,7 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
         }
     }
 
-    // A placeholder username validation check
+    // A placeholder username validation check 用户名验证检查
     private fun isUserNameValid(username: String): Boolean {
         return if (username.contains('@')) {
             Patterns.EMAIL_ADDRESS.matcher(username).matches()
@@ -47,7 +47,7 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
         }
     }
 
-    // A placeholder password validation check
+    // A placeholder password validation check 密码验证检查
     private fun isPasswordValid(password: String): Boolean {
         return password.length > 5
     }
