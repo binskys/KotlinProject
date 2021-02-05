@@ -12,21 +12,47 @@ import java.util.*
  */
 
 fun main(args: Array<String>) {
-    printNumericType()
+    printEmpty()
+//    printControl()
+//    printNumericType()
     //printConst()
-   // printVariable()
+    // printVariable()
     //printFun()
+}
+
+/**
+ *
+ */
+fun printEmpty() {
+    val testClass = EmptyClass()
+//    testClass.emptyType()
+    testClass.testBuilder()
+}
+
+/**
+ * 控制语句详解
+ */
+fun printControl() {
+    val testClass = ControlClass()
+//    testClass.testIf()
+//    testClass.testFor()
+    testClass.testWhen()
+
 }
 
 /**
  * 数据类型详解
  */
 fun printNumericType() {
-
-
+    val testClass = NumericTypeClass()
+    testClass.testConversion()
+    testClass.testOperator()
+    testClass.testString()
+    testClass.testArray()
 }
 
 fun printFun() {
+
     val funClass = FunClass()
     val num = funClass.sum(2, 3)
     val maxOf = funClass.maxOf(2, 3)
