@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_bottom_bg"
+    android:padding="10dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="标题"
+        android:textColor="@color/color_33"
+        android:textSize="15sp"/>
+    <TextView
+        android:id="@+id/tv_question1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="第一个问题"
+        android:textColor="@color/color_33"
+        android:textSize="15sp"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:background="@color/color_dd"/>
+    <TextView
+        android:id="@+id/tv_question2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="第二个问题"
+        android:textColor="@color/color_33"
+        android:textSize="15sp"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:background="@color/color_dd"/>
+</LinearLayout>

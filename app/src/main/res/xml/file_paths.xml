@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <paths>
+        <!--
+       files-path：          该方式提供在应用的内部存储区的文件/子目录的文件。
+                             它对应Context.getFilesDir返回的路径：eg:”/data/data/com.***.***/files”。
+
+       cache-path：          该方式提供在应用的内部存储区的缓存子目录的文件。
+                             它对应Context.getCacheDir返回的路:eg:“/data/data/com.***.***/cache”；
+
+       external-path：       该方式提供在外部存储区域根目录下的文件。
+                             它对应Environment.getExternalStorageDirectory返回的路径
+
+       external-files-path:  Context.getExternalFilesDir(null)
+
+       external-cache-path： Context.getExternalCacheDir(String)
+       <files-path/>代表的根目录： [Context.getFilesDir()](https://developer.android.com/reference/android/content/Context.html?hl=zh-tw#getFilesDir())
+
+<external-path/>代表的根目录: [Environment.getExternalStorageDirectory()](https://developer.android.com/reference/android/os/Environment.html?hl=zh-tw#getExternalStorageDirectory())
+
+<cache-path/>代表的根目录: [getCacheDir()](https://developer.android.com/reference/android/content/Context.html?hl=zh-tw#getCacheDir())
+       -->
+        <external-path path="" name="download"/>
+        <cache-path path="" name="cache"/>
+        <external-path name="external_path" path="."/>
+
+        <!-- /storage/emulated/0/Download/${applicationId}/.beta/apk-->
+        <external-path name="beta_external_path" path="Download/"/>
+        <!--/storage/emulated/0/Android/data/${applicationId}/files/apk/-->
+        <external-path name="beta_external_files_path" path="Android/data/"/>
+
+      <!--  <files-path name="my_images" path="images"/>的意思就是/data/user/0/包名/files + "/files-path标签中path的值
+        /"路径下的文件是可共享的，在生成Uri时name的值my_images会替代上面的路径/data/user/0/包名/files / images /向外暴露
+        。最终的Uri会是content : //com.example.admin.custmerviewapplication / my_images / test.jpg-->
+
+    </paths>
+</resources>
+
+
+

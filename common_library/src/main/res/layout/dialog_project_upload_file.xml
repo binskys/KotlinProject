@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/base_dialog_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_ff_5dp"
+    android:gravity="center_horizontal"
+    android:paddingTop="35dp"
+    android:paddingBottom="35dp"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/dialog_upload_tvProTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0/100"
+        android:textColor="@color/color_108"
+        android:textSize="@dimen/_15sp" />
+
+    <ProgressBar
+        android:id="@+id/dialog_upload_progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progressDrawable="@drawable/shape_jianbian_hor"
+        android:layout_marginLeft="@dimen/_25dp"
+        android:layout_marginRight="@dimen/_25dp"
+        android:layout_marginTop="@dimen/_22dp"
+        android:layout_width="match_parent"
+        android:max="100"
+        android:layout_height="8dp" />
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_marginTop="@dimen/_25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_uploading"
+        android:textColor="#999999"
+        android:textSize="15dp" />
+
+</LinearLayout>

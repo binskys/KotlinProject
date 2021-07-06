@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="service_error">服务器出错</string>
+    <string name="not_found">请求的资源不存在</string>
+    <string name="timeout">请求超时</string>
+    <string name="unexpected_error">未知错误</string>
+    <string name="network_wrong">网络有问题</string>
+
+    <string name="str_confirm">确定</string>
+    <string name="str_cancel">取消</string>
+
+    <string name="str_current_new">当前已是最新版本</string>
+    <string name="str_zbsj">暂不升级</string>
+    <string name="str_ljty">立即体验</string>
+    <string name="str_cs">重试</string>
+    <string name="str_az">安装</string>
+    <string name="str_fxxbb">发现新版本</string>
+    <string name="str_zxbb">最新版本:</string>
+    <string name="str_qxtx">通知权限未打开,是否开启通知权限？</string>
+    <string name="str_update_notification_tip">版本更新需要开启通知栏权限</string>
+    <string name="str_updating">正在下载</string>
+    <string name="str_jxxz">继续下载</string>
+    <string name="str_ztxz">暂停下载</string>
+    <string name="str_bbgx">版本更新</string>
+    <string name="str_download_pro">下载进度：</string>
+    <string name="str_download_finish">下载完成</string>
+    <string name="str_download_pause">下载暂停</string>
+    <string name="str_xzsb">下载失败</string>
+    <string name="str_xzcg">下载成功</string>
+    <string name="str_zzxz">正在下载…</string>
+    <string name="str_update_fail">更新失败</string>
+    <string name="str_qsh_sl">请稍后…</string>
+    <string name="str_uploading">上传中，请稍后</string>
+    <string name="str_downloading">下载中，请稍后</string>
+    <string name="str_scsb">上传失败</string>
+    <string name="str_sccg">上传成功</string>
+    <string name="str_wjbcz">文件不存在</string>
+
+    <string name="str_asydxd">—— 没有更多内容啦 ——</string>
+</resources>

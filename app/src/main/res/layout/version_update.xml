@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_log"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_ff_btm_r10"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="100dp"
+            android:maxHeight="@dimen/_250dp"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:layout_marginTop="@dimen/_10dp">
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/_39dp"
+                android:paddingRight="@dimen/_39dp"
+                android:paddingTop="@dimen/_15dp"
+                android:gravity="center|start|top"
+                android:lineSpacingExtra="@dimen/_10dp"
+                android:textColor="#28334A"
+                tools:text="个大赛空了个那里是给你发打开了个能力得分拿回来地方可能卡络磺钠地方了哪还能老地方哪里看还带了拿回来的了你好可怜的了活动亮点你厉害到客户了的活动付电话费的烦得很烦得很"
+                android:textSize="@dimen/_14sp"/>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll_ok_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_44dp"
+                android:layout_weight="1"
+                android:background="@drawable/share_theme_version_p"
+                android:gravity="center"
+                android:text="@string/str_zbsj"
+                android:textAllCaps="false"
+                android:textColor="@color/color_33"
+                android:textSize="@dimen/_14dp"
+                android:visibility="gone"
+                android:layout_marginEnd="@dimen/_25dp" />
+
+            <TextView
+                android:id="@+id/btn_ok"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_44dp"
+                android:layout_weight="1"
+                android:background="@drawable/share_theme_version"
+                android:gravity="center"
+                android:text="@string/str_ljty"
+                android:textAllCaps="false"
+                android:textColor="@color/color_ff"
+                android:textSize="@dimen/_14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="5dp"
+                android:layout_margin="@dimen/_15dp"
+                android:layout_weight="1"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/upload_progress_bar_states" />
+
+            <TextView
+                android:id="@+id/tv_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:padding="@dimen/_15dp"
+                tools:text="0%"
+                android:textColor="@color/color_283"
+                android:textSize="@dimen/_16sp" />
+
+            <TextView
+                android:id="@+id/tv_download_again"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="@string/str_cs"
+                android:textColor="@color/color_283"
+                android:textSize="@dimen/_16sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_install"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:padding="15dp"
+                android:text="@string/str_az"
+                android:textColor="@color/color_283"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_log"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_gravity="center"
+        android:src="@drawable/update_top_bg"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:contentDescription="@null"/>
+
+    <ImageView
+        android:id="@+id/ic_update_close"
+        android:layout_width="@dimen/_24dp"
+        android:layout_height="@dimen/_24dp"
+        android:src="@drawable/ic_update_close"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@null"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="@+id/iv_log"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_log"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="@dimen/_30dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_fxxbb"
+            android:textColor="@color/color_ff"
+            android:textSize="@dimen/_18sp"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/_15dp"/>
+
+        <TextView
+            android:id="@+id/tv_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_ff"
+            android:textSize="18sp"
+            android:layout_marginStart="@dimen/_10dp"
+            tools:text="v2.0.0"
+            android:textStyle="bold" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

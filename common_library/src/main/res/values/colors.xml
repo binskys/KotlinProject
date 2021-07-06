@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--基本色值-->
+    <color name="color_ff">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="color_f2">#F2F2F2</color>
+    <color name="color_dd">#DDDDDD</color>
+    <color name="color_33">#333333</color>
+    <color name="color_66">#666666</color>
+    <color name="color_108">#108EE9</color>
+    <color name="color_283">#28334A</color>
+    <color name="color_000">#00000000</color>
+    <color name="color_58b">#58B9FF</color>
+    <color name="color_005">#0051DC</color>
+</resources>

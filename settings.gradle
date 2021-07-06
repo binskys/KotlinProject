@@ -1,2 +1,4 @@
+include ':common_library'
+include ':zxing_library'
 include ':app'
-rootProject.name = "KotlinProject"
+rootProject.name = "TestKotlin"

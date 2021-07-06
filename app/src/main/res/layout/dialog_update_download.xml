@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/_20dp"
+    android:background="@drawable/shape_ff_10dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_download_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/_18sp"
+        android:textStyle="bold"
+        android:textColor="@color/color_33"
+        android:text="@string/str_updating"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/_14sp"
+        android:textColor="@color/color_33"
+        android:text="@string/str_qsh_sl"
+        android:layout_marginTop="@dimen/_10dp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20dp">
+        <com.ruiec.testkotlin.update.MySeekBar
+            android:id="@+id/seek_bar_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:thumbOffset="0dp"
+            android:progressDrawable="@drawable/upload_progress_bar_states"
+            android:maxHeight="5dp"
+            android:minHeight="5dp"
+            android:splitTrack="false"
+            android:progress="0"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_10dp"/>
+
+        <com.ruiec.testkotlin.update.MySeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:thumb="@drawable/ic_hj"
+            android:thumbOffset="0dp"
+            android:progressDrawable="@color/transparent"
+            android:maxHeight="@dimen/_5dp"
+            android:minHeight="@dimen/_5dp"
+            android:splitTrack="false"
+            android:progress="0"
+            android:layout_gravity="center_vertical"/>
+
+    </FrameLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/_12sp"
+            android:textColor="@color/color_33"
+            tools:text="0%"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="@dimen/_10dp"/>
+
+        <TextView
+            android:id="@+id/tv_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/_12sp"
+            android:textColor="@color/color_33"
+            tools:text="15.8M/32.5M"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginEnd="@dimen/_10dp"/>
+
+        <TextView
+            android:id="@+id/tv_download_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/_12sp"
+            android:textColor="@color/color_108"
+            android:text="@string/str_cs"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:visibility="gone"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
